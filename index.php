@@ -3,16 +3,27 @@
 <title>Wap Telegram</title>
 </head>
 <body bgcolor=#292c2f>
+<style>
+.center {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translateX(-50%) translateY(-50%);
+}
+</style>
 <?php
 //Авторизация
 $password="1234";
 $password_login = $_GET['password'];
 if ($password_login == $password){} else
 {
-echo "<font color=white>Введите пароль:</font><br>";
+echo "<body background=background.jpg>";
+echo "<div class=center>";
+echo "<font color=white><b>Введите пароль:</b></font><br>";
 echo "<form action=index.php method=get>";
 echo "<input type=text name=password>";
 echo "<input type=submit value=Войти>";
+echo "</div>";
 die();
 }
 ?>
@@ -35,7 +46,7 @@ foreach ($ids as $value) {
 $info=$MadelineProto->getInfo($value);
 $infouser = array_column($info, 'first_name');
 foreach ($infouser as $unm) {
-echo "<a href='http://$host:8000/chat.php?sobes=$value&password=$password'><b><font color='blue'>$unm</font></b></a> <br>";
+echo "<a href='http://$host:8000/chat.php?sobes=$value&password=$password'><b><font color='#49baf9'>$unm</font></b></a> <br>";
 }
 }
 ?>

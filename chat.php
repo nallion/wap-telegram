@@ -21,6 +21,7 @@ $dialog=$_GET["sobes"];
 $info=$MadelineProto->getInfo($dialog);
 $infouser = array_column($info, 'username');
 foreach ($infouser as $unm) {
+echo "<font color=lime>Wap telegram</font><br>";
 echo "<font color=white>Диалог с: <b><font color=#c678dd>$unm</font></b></font>";
 echo "&nbsp;&nbsp;";
 echo "<b><font color=#d19a66>";
@@ -47,12 +48,13 @@ echo "<input type=text name=msg>";
 echo "<input type=hidden name=komu value=$dialog>";
 echo "<input type=submit value='Отправить'>";
 echo "</form>";
-echo "<br><a href=/index.php?password=1234><font color=blue>Назад</font></a><br>";
-echo("<a href=chat.php?sobes=$dialog&password=$password><font color=blue>Обновить</font></a>");
-echo "<br>";
+echo "<a href=/photoupload.php?touser=$dialog><font color=#49baf9>Загрузить фото</font></a><br>";
+echo "<br><a href=/index.php?password=1234><font color=#49baf9>Назад</font></a><br>";
+echo("<a href=chat.php?sobes=$dialog&password=$password><font color=#49baf9>Обновить</font></a>");
+echo "<br><br>";
 $me = $MadelineProto->getSelf();
 $myuser = $me["first_name"];
-$msgs = $MadelineProto->messages->getHistory(['peer' => $dialog, 'offset_id' => 0, 'offset_date' => 0, 'add_offset' => 0, 'limit' => 0, 'max_id' => 0, 'min_id' => 0, 'hash' => 0 ]);
+$msgs = $MadelineProto->messages->getHistory(['peer' => $dialog, 'offset_id' => 0, 'offset_date' => 0, 'add_offset' => 0, 'limit' => 30, 'max_id' => 0, 'min_id' => 0, 'hash' => 0 ]);
 foreach ($msgs['messages'] as $message) {
               //print_r($message);
               try {
@@ -98,7 +100,11 @@ foreach ($msgs['messages'] as $message) {
               echo "<br>";
               }
               if($extension=="zip") {
-              echo ("<a href=/images/$imgname target=new><b><font color=white>Документ: $imgname</font></b></a>");
+              echo ("<a href=/images/$imgname target=new><b><font color=#abb2bf>Документ: $imgname</font></b></a>");
+              echo "<br>";
+              }
+              if($extension=="MOV") {
+              echo ("<a href=/images/$imgname target=new><b><font color=#abb2bf>Скачать видео (mov): $imgname</font></b></a>");
               echo "<br>";
               }
               }
@@ -109,7 +115,7 @@ foreach ($msgs['messages'] as $message) {
               if ($out == 1) { $out = "<b><font color=#c678dd>$myuser:</font></b>"; } else { $out = "<b><font color=#98c379>$unm:</font></b>"; };
               $cleanmsg=$message['message'];
               $urlregex = '~(?:(https?)://([^\s<]+)|(www\.[^\s<]+?\.[^\s<]+))(?<![\.,:])~i';
-              $cleanmsg = preg_replace($urlregex, '<a href="$0" target="new" title="$0"><font color=blue>$0</font></a>', $cleanmsg);
+              $cleanmsg = preg_replace($urlregex, '<a href="$0" target="new" title="$0"><font color=#49baf9>$0</font></a>', $cleanmsg);
               echo "<font color=#abb2bf>";
               echo $date ." $out ". $cleanmsg . "<br>";
 }
