@@ -10,6 +10,7 @@ What now maded<br>
 *Contactlist<br>
 *Chat with user<br>
 *Images and documents in chat with user<br>
+*Upload photos<br>
 
 
 (c) Kleyno Yaroslav, 2022
