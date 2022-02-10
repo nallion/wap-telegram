@@ -46,3 +46,6 @@ What now maded<br>
 ![alt text](https://raw.githubusercontent.com/nallion/wap-telegram/main/.gitignore/2_dialoglist.jpg)<br>
 Диалог с пользователем:<br>
 ![alt text](https://raw.githubusercontent.com/nallion/wap-telegram/main/.gitignore/3_dialog.jpg)<br>
+Большой диалог с пользователем
+
+![alt text](https://github.com/nallion/wap-telegram/blob/main/.gitignore/fullchat.png?raw=true)<br>
