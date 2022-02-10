@@ -39,7 +39,7 @@ What now maded<br>
 
 ![alt text](https://raw.githubusercontent.com/nallion/wap-telegram/main/.gitignore/g_9.jpg)<br>
 
-Скриншоты c телефона:<br>
+Скриншоты c телефона:<br><br>
 Окно логина:<br>
 ![alt text](https://raw.githubusercontent.com/nallion/wap-telegram/main/.gitignore/1_login.jpg)<br>
 Список диалогов:<br>
