@@ -46,3 +46,13 @@ What now maded<br>
 ![alt text](https://raw.githubusercontent.com/nallion/wap-telegram/main/.gitignore/3_dialog.jpg)<br>
 Скриншот с ПК (для наглядности, как выглядит чат с собеседником)<br>
 ![alt text](https://github.com/nallion/wap-telegram/blob/main/.gitignore/fullchat.png?raw=true)<br>
+
+Фото работы на телефонах (Браузер Opera Mini, но клиент отлично работает и в Dorado.
+
+![alt text](https://github.com/nallion/wap-telegram/blob/main/.gitignore/1_SIGMA.jpg?raw=true)
+![alt text](https://github.com/nallion/wap-telegram/blob/main/.gitignore/1_nokia.jpg?raw=true)
+![alt text](https://github.com/nallion/wap-telegram/blob/main/.gitignore/2_SIGMA.jpg?raw=true)
+![alt text](https://github.com/nallion/wap-telegram/blob/main/.gitignore/2_nokia.jpg?raw=true)
+![alt text](https://github.com/nallion/wap-telegram/blob/main/.gitignore/3_Nokia.jpg?raw=true)
+![alt text](https://github.com/nallion/wap-telegram/blob/main/.gitignore/3_SIGMA.jpg?raw=true)
+
