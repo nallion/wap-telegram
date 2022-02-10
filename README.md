@@ -62,7 +62,7 @@ What now maded<br>
 
 1) Купите дешовую vps'ку. Хороший каталог https://poiskvps.ru Операционную систему выберите на свой вкус Проще всего, конечно, с Ubuntu или Debian<br>
 2) Установите nginx, php8.1-fpm, git, php8.1-xml, php8.1-mbstring, php8.1-gd<br> Обязательно укажите в директиве server_name нжинкса ваш IP или домен/сабдомен.
-3) Настройте nginx и php таким образом, чтобы www-root был /var/www/html , и в нём работал php8.1<br>
+3) Настройте nginx и php таким образом, чтобы www-root был /var/www/html , и в нём работал php8.1 В качестве индекса укажите index.php<br>
 4) Перейдите в директорию /var/www/html и склонируйте этот репозиторий прямо в корень /var/www/html<br>
 **git clone https://github.com/nallion/wap-telegram.git .** <br>
 5) Выставите права 777 на папку /var/www/html
