@@ -49,7 +49,7 @@ foreach ($ids as $value) {
 $info=$MadelineProto->getInfo($value);
 $infouser = array_column($info, 'first_name');
 foreach ($infouser as $unm) {
-echo "<a href='http://$host:8000/chat.php?sobes=$value&password=$password'><b><font color='#49baf9'>$unm</font></b></a> <br>";
+echo "<a href='http://$host/chat.php?sobes=$value&password=$password'><b><font color='#49baf9'>$unm</font></b></a> <br>";
 }
 }
 ?>
