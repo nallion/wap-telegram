@@ -6,7 +6,18 @@ html {
 }
 </style>
 <?php
-$password="1234";
+session_start();
+?>
+<?php
+$password_login = $_GET['password'];
+$password_session = $_SESSION["mysession"];
+if (empty($password_session)) {echo "<h2><font color=red>НЕТ СЕССИИ!</h2></font>"; die;}
+if (empty($password_login))   {echo "<h2><font color=red>НЕТ ПАРОЛЯ!</h2></font>"; die;}
+if ($password_login == $password_session) { }
+else { echo "<h2><font color=red>СЕССИЯ И ПАРОЛЬ НЕ СОВПАДАЮТ!</h2></font>"; die(); }
+?>
+
+<?php
 $poluchatel = $_GET['touser'];
 //GET UNAME BY ID
 include 'madeline.php';
@@ -19,11 +30,11 @@ echo "Отправка фото пользователю:&nbsp;<font color=#c678
 }
 //END
 echo "Просьба выбирать только .jpg - картинки, другое медиа будет проигнорировано.<br><br>";
-echo "<form action=photoupload.php?touser=$poluchatel method=post enctype=multipart/form-data>";
+echo "<form action=photoupload.php?touser=$poluchatel&password=$password_login method=post enctype=multipart/form-data>";
 echo "<input type=file name=image>";
 echo "<button type=submit>Загрузить фото</button>";
 echo "</form>";
-echo "<a href=/chat.php?sobes=$poluchatel&password=$password><font color=#49baf9>Назад</font></a>";
+echo "<a href=/chat.php?sobes=$poluchatel&password=$password_login><font color=#49baf9>Назад</font></a>";
 ?>
 <?php
 #include 'madeline.php';
@@ -42,8 +53,8 @@ $MadelineProto->start();
         '_' => 'inputMediaUploadedPhoto',
         'file' => $fullfilepath
     ],
-    'message' => '[Отправлено с кнопоного телефона http://naltg.tk:8000](http://naltg.tk:8000)',
+    'message' => '[Отправлено с кнопочного телефона https://github.com/nallion/wap-telegram](https://github.com/nallion/wap-telegram)',
     'parse_mode' => 'Markdown'
 ]);
-header("Location: chat.php?sobes=$poluchatel&password=$password");
+header("Location: chat.php?sobes=$poluchatel&password=$password_login");
 ?>

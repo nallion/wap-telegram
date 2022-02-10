@@ -1,17 +1,15 @@
 <html>
 <body bgcolor=#292c2f>
 <?php
-//Авторизация
-$password="1234";
+session_start();
+?>
+<?php
 $password_login = $_GET['password'];
-if ($password_login == $password){} else
-{
-echo "<font color=white>Введите пароль:</font><br>";
-echo "<form action=index.php method=get>";
-echo "<input type=text name=password>";
-echo "<input type=submit value=Войти>";
-die();
-}
+$password_session = $_SESSION["mysession"];
+if (empty($password_session)) {echo "<h2><font color=red>НЕТ СЕССИИ!</h2></font>"; die;}
+if (empty($password_login))   {echo "<h2><font color=red>НЕТ ПАРОЛЯ!</h2></font>"; die;}
+if ($password_login == $password_session) { }
+else { echo "<h2><font color=red>СЕССИЯ И ПАРОЛЬ НЕ СОВПАДАЮТ!</h2></font>"; die(); }
 ?>
 <?php
 include 'madeline.php';
@@ -46,11 +44,12 @@ echo "<i><font color=white>Был(a) онлайн:&nbsp;</font><font color=red><
 echo "<form action=send.php method=get>";
 echo "<input type=text name=msg>";
 echo "<input type=hidden name=komu value=$dialog>";
+echo "<input type=hidden name=password value=$password_login>";
 echo "<input type=submit value='Отправить'>";
 echo "</form>";
-echo "<a href=/photoupload.php?touser=$dialog><font color=#49baf9>Загрузить фото</font></a><br>";
-echo "<br><a href=/index.php?password=1234><font color=#49baf9>Назад</font></a><br>";
-echo("<a href=chat.php?sobes=$dialog&password=$password><font color=#49baf9>Обновить</font></a>");
+echo "<a href=/photoupload.php?touser=$dialog&password=$password_login><font color=#49baf9>Загрузить фото</font></a><br>";
+echo "<br><a href=/index.php?password=$password_login><font color=#49baf9>Назад</font></a><br>";
+echo("<a href=chat.php?sobes=$dialog&password=$password_login><font color=#49baf9>Обновить</font></a>");
 echo "<br><br>";
 $me = $MadelineProto->getSelf();
 $myuser = $me["first_name"];
@@ -117,5 +116,5 @@ foreach ($msgs['messages'] as $message) {
               $urlregex = '~(?:(https?)://([^\s<]+)|(www\.[^\s<]+?\.[^\s<]+))(?<![\.,:])~i';
               $cleanmsg = preg_replace($urlregex, '<a href="$0" target="new" title="$0"><font color=#49baf9>$0</font></a>', $cleanmsg);
               echo "<font color=#abb2bf>";
-              echo $date ." $out ". $cleanmsg . "<br>";
+              echo $date  ." $out &nbsp; ". $cleanmsg . "<br>";
 }

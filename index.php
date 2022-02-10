@@ -12,13 +12,15 @@ transform: translateX(-50%) translateY(-50%);
 }
 </style>
 <?php
-//Авторизация
-$password="1234";
+//Авторизация - здесь укажите пароль для входа!!!
+$password="12345";
 $password_login = $_GET['password'];
+session_start();
+$_SESSION["mysession"] = "$password";
 if ($password_login == $password){} else
 {
-echo "<body background=background.jpg>";
 echo "<div class=center>";
+echo "<font color=white><h2>Wap telegram</font></h2><br>";
 echo "<font color=white><b>Введите пароль:</b></font><br>";
 echo "<form action=index.php method=get>";
 echo "<input type=text name=password>";
@@ -41,6 +43,7 @@ echo "<b><font color=#d19a66>";
 echo date('H:i');
 echo "</font></b>";
 echo "<br><br><br>";
+echo "<font color=white>Список диалогов:</font><br><br>";
 $ids = array_column($dialogsarr, 'user_id');
 foreach ($ids as $value) {
 $info=$MadelineProto->getInfo($value);
