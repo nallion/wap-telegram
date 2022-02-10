@@ -58,5 +58,13 @@ What now maded<br>
 ![alt text](https://github.com/nallion/wap-telegram/blob/main/.gitignore/nomi_2.jpg?raw=true)
 ![alt text](https://github.com/nallion/wap-telegram/blob/main/.gitignore/nomi_3.jpg?raw=true)
 
-# Установка:
+# Установка:<br>
 
+1) Купите дешовую vps'ку. Хороший каталог https://poiskvps.ru . Операционную систему выберите на свой вкус<br>
+2) Установите nginx, php8.1-fpm, git<br>
+3) Настройте nginx и php таким образом, чтобы www-root был /var/www/html , и в нём работал php8.1<br>
+4) Перейдите в директорию /var/www/html и склонируйте этот репозиторий<br>
+git clone https://github.com/nallion/wap-telegram.git . <br>
+5) Задайте пароль для Вашего телеграмма в файле index.php на 16 строке<br>
+6) Пройдите по адресу http://IP вашего сервера
+7) Войдите в телеграмм
