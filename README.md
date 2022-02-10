@@ -57,6 +57,10 @@ What now maded<br>
 ![alt text](https://github.com/nallion/wap-telegram/blob/main/.gitignore/nomi_1.jpg?raw=true)
 ![alt text](https://github.com/nallion/wap-telegram/blob/main/.gitignore/nomi_2.jpg?raw=true)
 ![alt text](https://github.com/nallion/wap-telegram/blob/main/.gitignore/nomi_3.jpg?raw=true)
+![alt text](https://github.com/nallion/wap-telegram/blob/main/.gitignore/nomi2.4.jpg?raw=true)
+![alt text](https://github.com/nallion/wap-telegram/blob/main/.gitignore/nomi2.3.jpg?raw=true)
+![alt text](https://github.com/nallion/wap-telegram/blob/main/.gitignore/nomi2.4.jpg?raw=true)
+
 
 # Установка:<br>
 
