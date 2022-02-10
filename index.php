@@ -13,7 +13,7 @@ transform: translateX(-50%) translateY(-50%);
 </style>
 <?php
 //Авторизация - здесь укажите пароль для входа!!!
-$password="12345";
+$password="123";
 $password_login = $_GET['password'];
 session_start();
 $_SESSION["mysession"] = "$password";
@@ -42,13 +42,15 @@ echo "<font color=white>Выбери собеседника</font>&nbsp;&nbsp;";
 echo "<b><font color=#d19a66>";
 echo date('H:i');
 echo "</font></b>";
-echo "<br><br><br>";
-echo "<font color=white>Список диалогов:</font><br><br>";
+echo "<br>";
+echo "<font color=white>Список диалогов:</font><br>";
 $ids = array_column($dialogsarr, 'user_id');
 foreach ($ids as $value) {
 $info=$MadelineProto->getInfo($value);
 $infouser = array_column($info, 'first_name');
 foreach ($infouser as $unm) {
+//this is heavy hack to hide telegram user from contactlist
+if ($unm =="Telegram") { $unm= ""; }
 echo "<a href='http://$host/chat.php?sobes=$value&password=$password'><b><font color='#49baf9'>$unm</font></b></a> <br>";
 }
 }
