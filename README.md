@@ -37,4 +37,12 @@ What now maded<br>
 *Картинки, документы, отображение не анимированных стикеров.<br>
 *Загрузка фотографий.<br>
 
-![alt text](https://raw.githubusercontent.com/nallion/wap-telegram/main/.gitignore/g_9.jpg)
+![alt text](https://raw.githubusercontent.com/nallion/wap-telegram/main/.gitignore/g_9.jpg)<br>
+
+Скриншоты c телефона:<br>
+Окно логина:<br>
+![alt text](https://raw.githubusercontent.com/nallion/wap-telegram/main/.gitignore/1_login.jpg)
+Список диалогов:<br>
+![alt text](https://raw.githubusercontent.com/nallion/wap-telegram/main/.gitignore/2_dialoglist.jpg)
+Диалог с пользователем:<br>
+![alt text](https://raw.githubusercontent.com/nallion/wap-telegram/main/.gitignore/3_dialog.jpg)
