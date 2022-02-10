@@ -41,8 +41,8 @@ What now maded<br>
 
 Скриншоты c телефона:<br>
 Окно логина:<br>
-![alt text](https://raw.githubusercontent.com/nallion/wap-telegram/main/.gitignore/1_login.jpg)
+![alt text](https://raw.githubusercontent.com/nallion/wap-telegram/main/.gitignore/1_login.jpg)<br>
 Список диалогов:<br>
-![alt text](https://raw.githubusercontent.com/nallion/wap-telegram/main/.gitignore/2_dialoglist.jpg)
+![alt text](https://raw.githubusercontent.com/nallion/wap-telegram/main/.gitignore/2_dialoglist.jpg)<br>
 Диалог с пользователем:<br>
-![alt text](https://raw.githubusercontent.com/nallion/wap-telegram/main/.gitignore/3_dialog.jpg)
+![alt text](https://raw.githubusercontent.com/nallion/wap-telegram/main/.gitignore/3_dialog.jpg)<br>
