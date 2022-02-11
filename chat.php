@@ -21,8 +21,10 @@ $infouser = array_column($info, 'username');
 if(empty($infouser)) {
 $info=$MadelineProto->getInfo($dialog);
 $nickname = array_column($info, 'first_name');
+$nickname2 = array_column($info, 'last_name');
 $nick = $nickname[0];
-
+if(!empty($nickname2)) { $nick2 = $nickname2[0]; }
+if(!empty($nick2)) { $nick = $nick." ".$nick2; }
 echo "<font color=lime>Wap telegram</font><br>";
 echo "<font color=white>Диалог с: <b><font color=#c678dd>$nick</font></b></font>";
 echo "&nbsp;&nbsp;";
