@@ -29,6 +29,7 @@ echo "&nbsp;&nbsp;";
 echo "<b><font color=#d19a66>";
 echo date('H:i');
 echo "</font></b>";
+echo "<title>$nick</title>";
 }
 foreach ($infouser as $unm) {
 echo "<font color=lime>Wap telegram</font><br>";
@@ -82,7 +83,7 @@ foreach ($msgs['messages'] as $message) {
               if($extension=="jpg") {
               echo ("<a href=/images/$imgname target=new><img src=/images/$imgname height=180></a>");
               echo "<br>";
-              } 
+              }
               if($extension=="png") {
               echo ("<a href=/images/$imgname target=new><img src=/images/$imgname height=180></a>");
               echo "<br>";
@@ -124,10 +125,14 @@ foreach ($msgs['messages'] as $message) {
              }
               $date = date("H:i:s", $message['date']);
               $out = gmdate($message['out']);
-              if ($out == 1) { $out = "<b><font color=#c678dd>$myuser:</font></b>"; } else { $out = "<b><font color=#98c379>$unm:</font></b>"; };
+              if ($out == 1) { $out = "<b><font color=#c678dd>$myuser:</font></b>"; } else {
+              if ( is_numeric($unm) ) { $unm = $nick; }
+              $out = "<b><font color=#98c379>$unm:</font></b>";
+              };
               $cleanmsg=$message['message'];
               $urlregex = '~(?:(https?)://([^\s<]+)|(www\.[^\s<]+?\.[^\s<]+))(?<![\.,:])~i';
               $cleanmsg = preg_replace($urlregex, '<a href="$0" target="new" title="$0"><font color=#49baf9>$0</font></a>', $cleanmsg);
               echo "<font color=#abb2bf>";
               echo $date  ." $out &nbsp; ". $cleanmsg . "<br>";
 }
+?>
