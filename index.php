@@ -48,9 +48,14 @@ $ids = array_column($dialogsarr, 'user_id');
 foreach ($ids as $value) {
 $info=$MadelineProto->getInfo($value);
 $infouser = array_column($info, 'first_name');
+$infouser2 = array_column($info, 'last_name');
 foreach ($infouser as $unm) {
 //this is heavy hack to hide telegram user from contactlist
 if ($unm =="Telegram") { $unm= ""; }
+foreach ($infouser2 as $unm2) {
+//echo $unm2;
+echo "<a href='http://$host/chat.php?sobes=$value&password=$password'><b><font color='#49baf9'>$unm2</font></b></a>&nbsp";
+}
 echo "<a href='http://$host/chat.php?sobes=$value&password=$password'><b><font color='#49baf9'>$unm</font></b></a> <br>";
 }
 }
