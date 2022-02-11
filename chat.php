@@ -18,6 +18,18 @@ $MadelineProto->start();
 $dialog=$_GET["sobes"];
 $info=$MadelineProto->getInfo($dialog);
 $infouser = array_column($info, 'username');
+if(empty($infouser)) {
+$info=$MadelineProto->getInfo($dialog);
+$nickname = array_column($info, 'first_name');
+$nick = $nickname[0];
+
+echo "<font color=lime>Wap telegram</font><br>";
+echo "<font color=white>Диалог с: <b><font color=#c678dd>$nick</font></b></font>";
+echo "&nbsp;&nbsp;";
+echo "<b><font color=#d19a66>";
+echo date('H:i');
+echo "</font></b>";
+}
 foreach ($infouser as $unm) {
 echo "<font color=lime>Wap telegram</font><br>";
 echo "<font color=white>Диалог с: <b><font color=#c678dd>$unm</font></b></font>";
