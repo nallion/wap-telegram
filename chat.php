@@ -35,7 +35,7 @@ echo "<title>$nick</title>";
 }
 foreach ($infouser as $unm) {
 echo "<font color=lime>Wap telegram</font><br>";
-echo "<font color=white>Диалог с: <b><font color=#c678dd>$unm</font></b></font>";
+echo "<font color=white>Диалог с: <b><font color=#c678dd>@$unm</font></b></font>";
 echo "&nbsp;&nbsp;";
 echo "<b><font color=#d19a66>";
 echo date('H:i');
