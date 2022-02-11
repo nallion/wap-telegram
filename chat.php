@@ -27,6 +27,7 @@ echo date('H:i');
 echo "</font></b>";
 echo "<title>$unm</title>";
 }
+if (empty($unm)) { $unm = $dialog; }
 echo"<br>";
 $ulast = $MadelineProto->getInfo($unm);
 $infouser = array_column($ulast, 'status');
